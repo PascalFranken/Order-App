@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="shortcut icon" href="./assets/img/fav icon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>
     <script src="./scripts/templates.js"></script>
 </head>
-<body onload="">
+<body onload="renderDishes()">
     <header>
         <img class="header-logo" src="./assets/img/logo/Logo.png" alt="">
         <div class="menu-btn-direction">
@@ -25,11 +28,23 @@
     </header>
 <div class="section-direction">
     <section class="sectionOne">
-        <img src="" alt="">
+        <div>
+        <img class="first-picture" src="./assets/img/sections_header/sectionOneBgImgtest.png" alt="">
+        <h1>Pascals Restaurant</h1>
+        <p class="rating">Bewertung (4,2 von 5 Sternen)</p>
+        </div>
+        <!-- <img src="./assets/img/fav icon/favicon.ico" alt=""> -->
+        <div class="main-dishes" id="dishes">
+            <img class="main-dishes-picture" src="./assets/img/sections_header/main_dishes.png" alt="">
+            <p class="main-dishes">Hauptgerichte</p>
+        </div>
     </section>
     <section class="basket-wrapper">
+        <h2>Warenkorb</h2>
+        <div id="cart${i}"></div>
 
     </section>
     </div>
+    <footer></footer>
 </body>
 </html>

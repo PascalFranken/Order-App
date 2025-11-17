@@ -1,0 +1,27 @@
+h1{
+    font-family: "Open Sans", sans-serif;
+}
+
+.rating{
+    color: orange;
+}
+
+h2{
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.main-dishes{
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+.description{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+}
+
+.price{
+    color: orange;
+}

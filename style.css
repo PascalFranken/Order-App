@@ -36,8 +36,58 @@ header{
 }
 
 .sectionOne{
-    background-image: url("./assets/img/sections_header/sectionOneBgImg.png");
+    /* background-image: url("./assets/img/sections_header/sectionOneBgImgtest.png"); */
     width: calc(100% - 300px);
     padding: 16px;
     border: 2px solid;
+    /* object-fit: cover;
+    background-repeat: no-repeat; */
+    /* background-size: cover; */
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.first-picture{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-dishes{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.main-dishes-picture{
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dish{
+    display:flex;
+    flex-direction: column;
+    height: 75px;
+    width: 100%;
+    border: 1px solid black;
+    gap: 2px;
+    padding: 3px;
+}
+
+.h3-btn-direction{
+    display:flex;
+    justify-content: space-between;
+}
+
+footer{
+    background-color: orange;
+    height: 100px;
+    width: 100%;
 }
