@@ -7,9 +7,16 @@ function renderDishes() {
     }
 }
 
-function addDishes(i) {
-    // const cartRef = document.getElementById('cart${i}');
-    // cartRef.innerHTML = "";
+function addDishesToCart(i) {
+    myCart.push(myDishes[i]);
+    renderDishesToCart();
+}
 
-    myDishes[i].cart.push()
+function renderDishesToCart() {
+    const cartRef = document.getElementById('cart');
+    cartRef.innerHTML = "";
+
+    for (let i = 0; i < myCart.length; i++) {
+        cartRef.innerHTML += getDishesToCartTemplate(i);
+    }
 }

@@ -4,7 +4,6 @@ const myDishes = [
         "price": 7.50,
         "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
         "amount": 0,
-        "cart": [],
     },
     {
         "name": "Jägerschnitzel",
@@ -30,4 +29,6 @@ const myDishes = [
         "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
         "amount": 0,
     }
-]
+];
+
+const myCart = [];
