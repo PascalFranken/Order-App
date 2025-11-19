@@ -24,7 +24,7 @@ const myDishes = [
         "amount": 0,
     },
     {
-        "name": "Wiener Schnitzel",
+        "name": "test Schnitzel",
         "price": 7,
         "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
         "amount": 0,

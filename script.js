@@ -9,8 +9,18 @@ function renderDishes() {
 
 function addDishesToCart(i) {
     myCart.push(myDishes[i]);
-    renderDishesToCart();
-}
+    myCart[i].amount += 1;
+    
+    if (myCart[i].amount == 1) {
+        
+       
+       
+    }else{
+         renderDishesToCart();
+
+    }
+}   
+
 
 function renderDishesToCart() {
     const cartRef = document.getElementById('cart');
@@ -21,13 +31,14 @@ function renderDishesToCart() {
     }
 }
 
-function amount(i) {
-    const minusRef = document.getElementById('btnMinus${i}');
-    const plusRef = document.getElementById('btnPlus${i}');
-    const amountRef = document.getElementById('amount${i}');
-    amountRef = amountRef.value;
+// function plus() {
+//     let count = document.getElementById('amount${i}');
+    
+//     document.getElementById('btnPlus${i}');
+//     count++;
+//     count.innerHTML = count;
 
-    plusRef.amountRef.value++;
-    minusRef.amountRef.value--;
+// }
 
-}
+
+// myCart[i].amount +1
