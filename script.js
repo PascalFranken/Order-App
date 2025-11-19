@@ -20,3 +20,14 @@ function renderDishesToCart() {
         cartRef.innerHTML += getDishesToCartTemplate(i);
     }
 }
+
+function amount(i) {
+    const minusRef = document.getElementById('btnMinus${i}');
+    const plusRef = document.getElementById('btnPlus${i}');
+    const amountRef = document.getElementById('amount${i}');
+    amountRef = amountRef.value;
+
+    plusRef.amountRef.value++;
+    minusRef.amountRef.value--;
+
+}
