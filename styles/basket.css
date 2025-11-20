@@ -14,3 +14,29 @@
     top: 0;
     
 }
+
+@media(max-width: 600px){
+    .basket-wrapper{
+        display:none;
+    }
+    .basket{
+        display:none;
+    }
+}
+
+.basket-Responsive{
+    display:none;  
+}
+
+@media(max-width: 600px){
+.basket-Responsive{
+    background-color: orange;
+    position: sticky;
+    bottom: 100px;
+    height: 50px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+}

@@ -29,3 +29,14 @@ h2{
 .cartH3{
     text-align: center;
 }
+
+.basketResponsive{
+    display:none;
+}
+
+@media(max-width: 600px){
+    .basketResponsive{
+        color: white;  
+    }
+    
+}

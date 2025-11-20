@@ -50,6 +50,13 @@ header{
     flex-grow: 1;  
 }
 
+@media(max-width: 600px){
+    .section-direction{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
 .sectionOne{
     /* background-image: url("./assets/img/sections_header/sectionOneBgImgtest.png"); */
     width: calc(100% - 300px);
@@ -65,6 +72,12 @@ header{
     
 }
 
+@media(max-width: 600px){
+    .sectionOne{
+        width: 100%;
+    }
+}
+
 .first-picture{
     height: 200px;
     width: 100%;
@@ -78,6 +91,7 @@ header{
     width: 100%;
     flex: 1;
     gap: 5px;
+    overflow-y: auto;
     /* justify-content: space-between; */
 }
 
@@ -90,7 +104,7 @@ header{
 .dish{
     display:flex;
     flex-direction: column;
-    height: 75px;
+    height: auto;
     width: 100%;
     border: 1px solid black;
     gap: 2px;
@@ -115,8 +129,6 @@ header{
     display:flex;
     justify-content: space-evenly;
 }
-
-
 
 footer{
     background-color: orange;

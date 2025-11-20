@@ -21,7 +21,6 @@ function addDishesToCart(i) {
     }
 }   
 
-
 function renderDishesToCart() {
     const cartRef = document.getElementById('cart');
     cartRef.innerHTML = "";
@@ -30,6 +29,9 @@ function renderDishesToCart() {
         cartRef.innerHTML += getDishesToCartTemplate(i);
     }
 }
+
+
+    
 
 // function plus() {
 //     let count = document.getElementById('amount${i}');
@@ -42,3 +44,4 @@ function renderDishesToCart() {
 
 
 // myCart[i].amount +1
+
