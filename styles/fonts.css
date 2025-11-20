@@ -26,9 +26,9 @@ h2{
     color: orange;
 }
 
-.cartH3{
+/* .cartH3{
     text-align: center;
-}
+} */
 
 @media(max-width: 600px){
     .basketResponsive{

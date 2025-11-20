@@ -46,7 +46,7 @@
         
         <div class="basket">
         <h2>Warenkorb</h2>
-        <div class="items" id="cart"></div>
+        <div id="cart"></div>
         </div>
         <div class="costs">
         <table>
@@ -72,16 +72,19 @@
             </tr>
         </table>
         </div>
+        <button class="submitBtn" onclick="openBasketDialog()">
+            <h2 class="submitOrder">Bestellen</h2>
+        </button>
     </section>
 </div>
 </div>
 
     <footer></footer>
-    <div id="basket_Responsive" onclick="openBasketDialog()" class="basket-Responsive">
+    <div id="basket_Responsive" onclick="openResponsiveBasketDialog()" class="basket-Responsive">
         <h2 class="basketResponsive">Warenkorb</h2>
     </div>
 
-    <dialog id="dialog" onclick="closeDialog()">
+    <dialog id="responsiveDialog" onclick="closeDialog()">
         <div onclick="bubblingProtection(event)">
             <header>
                 <h2>Deine Bestellung</h2>
@@ -110,6 +113,11 @@
             </tr>
         </table>
         </div>
+        </div>
+    </dialog>
+    <dialog id="dialog" onclick="closeDialog()">
+        <div class="testOrder" onclick="bubblingProtection(event)">
+           <h2>Sie haben eine Testbestellung vorgenommen</h2>
         </div>
     </dialog>
 
