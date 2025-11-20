@@ -84,11 +84,14 @@
         <h2 class="basketResponsive">Warenkorb</h2>
     </div>
 
-    <dialog id="responsiveDialog" onclick="closeDialog()">
-        <div onclick="bubblingProtection(event)">
+    <dialog id="responsiveDialog" onclick="closeResponsiveDialog()">
+        <div class="responsiveBasketDialog" onclick="bubblingProtection(event)">
             <header>
                 <h2>Deine Bestellung</h2>
             </header>
+            <div class="basketWrapperResponsive">
+
+            </div>
             <div class="costs">
         <table>
             <tr>
@@ -113,11 +116,14 @@
             </tr>
         </table>
         </div>
+        <button class="submitBtn" onclick="openBasketDialog()">
+            <h2 class="submitOrder">Bestellen</h2>
+        </button>
         </div>
     </dialog>
-    <dialog id="dialog" onclick="closeDialog()">
+    <dialog id="dialog" onclick="closeBasketDialog()">
         <div class="testOrder" onclick="bubblingProtection(event)">
-           <h2>Sie haben eine Testbestellung vorgenommen</h2>
+           <h2>Sie haben eine Testbestellung vorgenommen!</h2>
         </div>
     </dialog>
 

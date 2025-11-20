@@ -36,8 +36,22 @@ function openResponsiveBasketDialog() {
 }
 
 function openBasketDialog() {
-    const dialog = document.getElementById('dialog');
-    dialog.showModal();
+    const openDialog = document.getElementById('dialog');
+    openDialog.showModal();
+}
+
+function closeResponsiveDialog() {
+    const closeDialog = document.getElementById('responsiveDialog');
+    closeDialog.close();
+}
+
+function closeBasketDialog() {
+    const closeDialog = document.getElementById('dialog');
+    closeDialog.close();
+}
+
+function bubblingProtection(event) {
+    event.stopPropagation();
 }
 
 
