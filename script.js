@@ -30,6 +30,11 @@ function renderDishesToCart() {
     }
 }
 
+function openBasketDialog() {
+    const dialog = document.getElementById('dialog');
+    dialog.showModal();
+}
+
 
     
 

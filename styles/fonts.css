@@ -30,13 +30,16 @@ h2{
     text-align: center;
 }
 
-.basketResponsive{
-    display:none;
-}
-
 @media(max-width: 600px){
     .basketResponsive{
         color: white;  
-    }
-    
+    }   
+}
+
+.costs{
+    font-family: "Open Sans", sans-serif;
+}
+
+.sum{
+    font-weight: bold;
 }
