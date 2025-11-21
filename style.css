@@ -57,14 +57,21 @@ header{
     }
 }
 
+.test{
+    background-image: url("./assets/img/big_picture/sectionOneBgImg.png");
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
 .sectionOne{
-    /* background-image: url("./assets/img/sections_header/sectionOneBgImgtest.png"); */
     width: calc(100% - 300px);
     padding: 16px;
     border: 2px solid;
-    /* object-fit: cover;
-    background-repeat: no-repeat; */
-    /* background-size: cover; */
+    object-fit: cover;
     height: auto;
     display:flex;
     flex-direction: column;

@@ -1,7 +1,6 @@
-.bigPicture{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
+.logoMiddle{
+    position:absolute;
+    top: 175px;
 }
 
 .addBtn{
