@@ -42,7 +42,7 @@
     justify-content: center;
     align-items: center;
     border: 5px solid white;
-}
+    }
 }
 
 .costs{
@@ -52,10 +52,6 @@
 
 table{
     border-spacing: 10px;
-}
-
-.submitOrder{
-    font-family: "Open Sans", sans-serif;  
 }
 
 .testOrder{
