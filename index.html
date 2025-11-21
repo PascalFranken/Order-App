@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/standard.css">
-    <link rel="shortcut icon" href="./assets/img/fav icon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/fav_icon/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
 <body onload="renderDishes()">
     <header>
         <div class = "inner">
-        <img class="header-logo" src="./assets/img/logo/Logo.png" alt="">
+        <img class="header-logo" src="./assets/img/logo/Logo.png" alt="Bild eines Schnitzelgerichts mit Pommes und Salat">
         <div class="menu-btn-direction">
         <div class="menu-btn"></div>
         <div class="menu-btn"></div>
@@ -29,96 +29,88 @@
         </div>
     </header>
     <div class="contentLimitation">
-<div class="section-direction">
-    <section class="sectionOne">
-        <div>
-        <img class="first-picture" src="./assets/img/sections_header/sectionOneBgImgtest.png" alt="">
-        <h1>Pascals Restaurant</h1>
-        <p class="rating">Bewertung (4,2 von 5 Sternen)</p>
-        </div>
+        <div class="section-direction">
+            <section class="sectionOne">
+                <div>
+                    <img class="bigPicture" src="./assets/img/big_picture/sectionOneBgImg.png" alt="">
+                    <h1>Pascals Restaurant</h1>
+                    <p class="rating">Bewertung (4,2 von 5 Sternen)</p>
+                </div>
         <!-- <img src="./assets/img/fav icon/favicon.ico" alt=""> -->
-        <div class="main-dishes" id="dishes">
-            <img class="main-dishes-picture" src="./assets/img/sections_header/main_dishes.png" alt="">
-            <p class="main-dishes">Hauptgerichte</p>
+                <div class="main-dishes" id="dishes"></div>
+            </section>
+            <section class="basket-wrapper">
+                <div class="basket">
+                    <h2>Warenkorb</h2>
+                    <div id="cart"></div>
+                </div>
+                <div class="costs">
+                    <table>
+                        <tr>
+                            <td>Zwischensumme</td>
+                        </tr>
+                        <tr>
+                            <td>Lieferkosten</td>
+                        </tr>
+                        <tr>
+                            <td class="sum">Gesamt</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>nfbvjdbv</td>
+                        </tr>
+                        <tr>
+                            <td>5.00€</td>
+                        </tr>
+                        <tr>
+                            <td class="sum">bnvofnbfb</td>
+                        </tr>
+                    </table>
+                </div>
+                <button class="submitBtn" onclick="openBasketDialog()">
+                    <h2 class="submitOrder">Bestellen</h2>
+                </button>
+            </section>
         </div>
-    </section>
-    <section class="basket-wrapper">
-        
-        <div class="basket">
-        <h2>Warenkorb</h2>
-        <div id="cart"></div>
-        </div>
-        <div class="costs">
-        <table>
-            <tr>
-                <td>Zwischensumme</td>
-            </tr>
-            <tr>
-                <td>Lieferkosten</td>
-            </tr>
-            <tr>
-                <td class="sum">Gesamt</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td>nfbvjdbv</td>
-            </tr>
-            <tr>
-                <td>5.00€</td>
-            </tr>
-            <tr>
-                <td class="sum">bnvofnbfb</td>
-            </tr>
-        </table>
-        </div>
-        <button class="submitBtn" onclick="openBasketDialog()">
-            <h2 class="submitOrder">Bestellen</h2>
-        </button>
-    </section>
-</div>
-</div>
-
+    </div>
     <footer></footer>
     <div id="basket_Responsive" onclick="openResponsiveBasketDialog()" class="basket-Responsive">
         <h2 class="basketResponsive">Warenkorb</h2>
     </div>
-
     <dialog id="responsiveDialog" onclick="closeResponsiveDialog()">
         <div class="responsiveBasketDialog" onclick="bubblingProtection(event)">
             <header>
                 <h2>Deine Bestellung</h2>
             </header>
-            <div class="basketWrapperResponsive">
-
-            </div>
+            <div class="basketWrapperResponsive"></div>
             <div class="costs">
-        <table>
-            <tr>
-                <td>Zwischensumme</td>
-            </tr>
-            <tr>
-                <td>Lieferkosten</td>
-            </tr>
-            <tr>
-                <td class="sum">Gesamt</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td>nfbvjdbv</td>
-            </tr>
-            <tr>
-                <td>5.00€</td>
-            </tr>
-            <tr>
-                <td class="sum">bnvofnbfb</td>
-            </tr>
-        </table>
-        </div>
-        <button class="submitBtn" onclick="openBasketDialog()">
-            <h2 class="submitOrder">Bestellen</h2>
-        </button>
+                <table>
+                    <tr>
+                        <td>Zwischensumme</td>
+                    </tr>
+                    <tr>
+                        <td>Lieferkosten</td>
+                    </tr>
+                    <tr>
+                        <td class="sum">Gesamt</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>nfbvjdbv</td>
+                    </tr>
+                    <tr>
+                        <td>5.00€</td>
+                    </tr>
+                    <tr>
+                        <td class="sum">bnvofnbfb</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="submitBtn" onclick="openBasketDialog()">
+                <h2 class="submitOrder">Bestellen</h2>
+            </button>
         </div>
     </dialog>
     <dialog id="dialog" onclick="closeBasketDialog()">
@@ -126,6 +118,5 @@
            <h2>Sie haben eine Testbestellung vorgenommen!</h2>
         </div>
     </dialog>
-
 </body>
 </html>

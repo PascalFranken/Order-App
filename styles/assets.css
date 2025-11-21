@@ -1,3 +1,9 @@
+.bigPicture{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .addBtn{
     color: orange;
     height: 20px;
