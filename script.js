@@ -29,6 +29,9 @@ function renderDishesToCart() {
     for (let i = 0; i < myCart.length; i++) {
     cartRef.innerHTML += getDishesToCartTemplate(i);
     }
+    const currentSubtotalValueRef = document.getElementById('subtotal');
+    let currentSubtotalValue = currentSubtotalValueRef.value;
+    currentSubtotalValue = myCart.price;
 }
 
 function renderCartWithCurrentValues() {
@@ -51,6 +54,7 @@ function plus(i) {
     if (currentAmountValue > 1) {
       currentPriceValue = currentAmountValue * myCart[i].price;
         currentPriceValueRef.value = currentPriceValue + "€";
+        myPrices.push(currentPriceValue + "€")
     }
 }
 
@@ -60,31 +64,38 @@ function minus(i) {
     let currentPriceValue = currentPriceValueRef.value;
     const currentAmountValueRef = document.getElementById(`amount${i}`);
     let currentAmountValue = currentAmountValueRef.value;
-    if (currentAmountValue < 1) {
-    myCart.splice(i, 1);
+    if (currentAmountValue <= 1) {
+    myCart = myCart.filter((i) => {i !== i})
     }else{currentAmountValue--;
     currentAmountValueRef.value = currentAmountValue;
     }
     if (currentAmountValue >= 1) {
         currentPriceValue = currentAmountValue * myCart[i].price;
-        currentPriceValueRef.value = currentPriceValue.toFixed(2) + "€";
+        currentPriceValueRef.value = currentPriceValue + "€";
+        myPrices.push(currentPriceValue + "€");
     }
 }
 
 function calculateSum(i) {
-    document.getElementById('subtotal');
-    document.getElementById('sum');
+    const currentSubtotalValueRef = document.getElementById('subtotal');
+    const currentSubtotalValue = currentSubtotalValueRef.value;
+    const currentSumValueRef = document.getElementById('sum');
+    const currentSumValue = currentSumValueRef;
     const currentPriceValueRef = document.getElementById(`price${i}`);
     const currentPriceValue = currentPriceValueRef.value;
-    if (currentAmountValue >= 1) {
-        currentPriceValue
+    for (let i = 0; i < myPrices.length; i++) {
+        const currentSubtotalValue = myPrices[i];
+        currentSubtotalValueRef.value = current;
+        
     }
+    
 }
 
 function deleteDishFromCart(i) {
     document.getElementById(`btnDelete${i}`);
-    myCart.splice(i, 1);
-    renderCartWithCurrentValues();
+    // myCart.splice(i, 1);
+    // renderCartWithCurrentValues();
+    myCart.filter((i) => i !== i);
 }
 
 
