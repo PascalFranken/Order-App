@@ -8,27 +8,30 @@ function renderDishes() {
 }
 
 function addDishesToCart(i) {
-    myCart.push(myDishes[i]);
-    myCart[i].amount += 1;
-    
-    if (myCart[i].amount == 1) {
-        
-       
-       
-    }else{
-         renderDishesToCart();
 
+     if(myCart[i] == myDishes[i]){
+        plus();
+       }
+    
+   else if (myDishes[i]) {
+        myCart.push(myDishes[i]);
+        renderDishesToCart(i);
+        
     }
+    
+       
 }   
 
-function renderDishesToCart() {
+function renderDishesToCart(i) {
+    
     const cartRef = document.getElementById('cart');
     cartRef.innerHTML = "";
-
     for (let i = 0; i < myCart.length; i++) {
-        cartRef.innerHTML += getDishesToCartTemplate(i);
+    cartRef.innerHTML += getDishesToCartTemplate(i);
     }
 }
+    
+
 
 function openResponsiveBasketDialog() {
     const dialog = document.getElementById('responsiveDialog');
@@ -57,14 +60,14 @@ function bubblingProtection(event) {
 
     
 
-// function plus() {
-//     let count = document.getElementById('amount${i}');
-    
-//     document.getElementById('btnPlus${i}');
-//     count++;
-//     count.innerHTML = count;
+function plus() {
+    const currentValueRef = document.getElementById('amount${i}');
+    const currentValue = currentValueRef.value;
+    document.getElementById('btnPlus${i}');
+    currentValue++;
+    // count.innerHTML = count;
 
-// }
+}
 
 
 // myCart[i].amount +1
