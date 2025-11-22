@@ -30,15 +30,63 @@ function renderDishesToCart() {
     cartRef.innerHTML += getDishesToCartTemplate(i);
     }
 }
+
+function renderCartWithCurrentValues() {
+    
+    const cartRef = document.getElementById('cart');
+    cartRef.innerHTML = "";
+    for (let i = 0; i < myCart.length; i++) {
+    cartRef.innerHTML += getCartWithCurrentValuesTemplate(i);
+    }
+}
    
 function plus(i) {
-    let currentValueRef = document.getElementById(`amount${i}`);
-    let currentValue = currentValueRef.value;
     document.getElementById('btnPlus${i}');
-    currentValue++;
-    currentValue.value = currentValue;
-
+    const currentPriceValueRef = document.getElementById(`price${i}`);
+    let currentPriceValue = currentPriceValueRef.value;
+    const currentAmountValueRef = document.getElementById(`amount${i}`);
+    let currentAmountValue = currentAmountValueRef.value;
+    currentAmountValue++;
+    currentAmountValueRef.value = currentAmountValue;
+    if (currentAmountValue > 1) {
+      currentPriceValue = currentAmountValue * myCart[i].price;
+        currentPriceValueRef.value = currentPriceValue + "€";
+    }
 }
+
+function minus(i) {
+    document.getElementById('btnMinus${i}');
+    const currentPriceValueRef = document.getElementById(`price${i}`);
+    let currentPriceValue = currentPriceValueRef.value;
+    const currentAmountValueRef = document.getElementById(`amount${i}`);
+    let currentAmountValue = currentAmountValueRef.value;
+    if (currentAmountValue < 1) {
+    myCart.splice(i, 1);
+    }else{currentAmountValue--;
+    currentAmountValueRef.value = currentAmountValue;
+    }
+    if (currentAmountValue >= 1) {
+        currentPriceValue = currentAmountValue * myCart[i].price;
+        currentPriceValueRef.value = currentPriceValue.toFixed(2) + "€";
+    }
+}
+
+function calculateSum(i) {
+    document.getElementById('subtotal');
+    document.getElementById('sum');
+    const currentPriceValueRef = document.getElementById(`price${i}`);
+    const currentPriceValue = currentPriceValueRef.value;
+    if (currentAmountValue >= 1) {
+        currentPriceValue
+    }
+}
+
+function deleteDishFromCart(i) {
+    document.getElementById(`btnDelete${i}`);
+    myCart.splice(i, 1);
+    renderCartWithCurrentValues();
+}
+
 
 
 function openResponsiveBasketDialog() {

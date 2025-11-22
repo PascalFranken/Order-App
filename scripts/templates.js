@@ -15,11 +15,25 @@ function getDishesToCartTemplate(i) {
         <div class = "cartDish">
             <h3 class = "cartH3">${myCart[i].name}</h3>
             <div class = "btnInputDirection">
-                <button onclick = "minus()" id = "btnMinus${i}" class = "cartBtnMinus">-</button>
+                <button onclick = "minus(${i})" id = "btnMinus${i}" class = "cartBtnMinus">-</button>
                 <input id = "amount${i}" value = ${myCart[i].amount}>
                 <button onclick = "plus(${i})" id = "btnPlus${i}" class = "cartBtnPlus">+</button>
-                <!-- <input id = "price${i}" type = "number">
-                <button onclick = "amount(${i})" id = "btnDelete${i}" class = "cartBtnDelete">x</button> -->
+                <input id = "price${i}" value = ${myCart[i].price.toFixed(2)}€>
+                <button onclick = "deleteDishFromCart(${i})" id = "btnDelete${i}" class = "cartBtnDelete">x</button>
+            </div>
+        </div> `   
+}
+
+function getCartWithCurrentValuesTemplate(i) {
+    return /*html*/`
+        <div class = "cartDish">
+            <h3 class = "cartH3">${myCart[i].name}</h3>
+            <div class = "btnInputDirection">
+                <button onclick = "minus(${i})" id = "btnMinus${i}" class = "cartBtnMinus">-</button>
+                <input id = "amount${i}" value = ${myCart[i].currentAmountValue}>
+                <button onclick = "plus(${i})" id = "btnPlus${i}" class = "cartBtnPlus">+</button>
+                <input id = "price${i}" value = ${myCart[i].currentPriceValue}€>
+                <button onclick = "deleteDishFromCart(${i})" id = "btnDelete${i}" class = "cartBtnDelete">x</button>
             </div>
         </div> `   
 }
