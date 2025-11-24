@@ -29,9 +29,10 @@ function renderDishesToCart() {
     for (let i = 0; i < myCart.length; i++) {
     cartRef.innerHTML += getDishesToCartTemplate(i);
     }
-    const currentSubtotalValueRef = document.getElementById('subtotal');
-    let currentSubtotalValue = currentSubtotalValueRef.value;
-    currentSubtotalValue = myCart.price;
+    calculateSum();
+    // const currentSubtotalValueRef = document.getElementById('subtotal');
+    // let currentSubtotalValue = currentSubtotalValueRef.value;
+    // currentSubtotalValue = myCart.price;
 }
 
 function renderCartWithCurrentValues() {
@@ -44,18 +45,8 @@ function renderCartWithCurrentValues() {
 }
    
 function plus(i) {
-    document.getElementById('btnPlus${i}');
-    const currentPriceValueRef = document.getElementById(`price${i}`);
-    let currentPriceValue = currentPriceValueRef.value;
-    const currentAmountValueRef = document.getElementById(`amount${i}`);
-    let currentAmountValue = currentAmountValueRef.value;
-    currentAmountValue++;
-    currentAmountValueRef.value = currentAmountValue;
-    if (currentAmountValue > 1) {
-      currentPriceValue = currentAmountValue * myCart[i].price;
-        currentPriceValueRef.value = currentPriceValue + "€";
-        myPrices.push(currentPriceValue + "€")
-    }
+    myCart[i].amount++;
+    renderDishesToCart();
 }
 
 function minus(i) {
@@ -76,19 +67,22 @@ function minus(i) {
     }
 }
 
-function calculateSum(i) {
+function calculateSum() {
     const currentSubtotalValueRef = document.getElementById('subtotal');
-    const currentSubtotalValue = currentSubtotalValueRef.value;
-    const currentSumValueRef = document.getElementById('sum');
-    const currentSumValue = currentSumValueRef;
-    const currentPriceValueRef = document.getElementById(`price${i}`);
-    const currentPriceValue = currentPriceValueRef.value;
-    for (let i = 0; i < myPrices.length; i++) {
-        const currentSubtotalValue = myPrices[i];
-        currentSubtotalValueRef.value = current;
+    const amountRef = document.getElementById('itemAmount');
+    let costs = 0;
+    let amount = 0;
+    // const currentSumValueRef = document.getElementById('sum');
+    // const currentSumValue = currentSumValueRef;
+    // const currentPriceValueRef = document.getElementById(`price${i}`);
+    // const currentPriceValue = currentPriceValueRef.value;
+    for (let i = 0; i < myCart.length; i++) {
+        costs += myCart[i].price * myCart[i].amount;
+        amount += myCart[i].amount; 
         
     }
-    
+    currentSubtotalValueRef.innerText = costs.toFixed(2) + "€";
+    amountRef.innerHTML = amount;
 }
 
 function deleteDishFromCart(i) {
@@ -105,9 +99,9 @@ function openResponsiveBasketDialog() {
     dialog.showModal();
 }
 
-function openBasketDialog() {
-    const openDialog = document.getElementById('dialog');
-    openDialog.showModal();
+function openBasket() {
+    const openDialog = document.getElementById('open');
+    openDialog.classList.toggle('d_none');
 }
 
 function closeResponsiveDialog() {

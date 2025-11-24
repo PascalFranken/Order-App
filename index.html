@@ -46,8 +46,12 @@
                 
                 <div class="main-dishes" id="dishes"></div>
             </section>
+            <!-- <dialog id="responsiveDialog" onclick="closeResponsiveDialog()"> -->
             <section class="basket-wrapper">
-                <div class="basket">
+                <button class="open_basket_button" onclick="openBasket()"> <p id="itemAmount">0</p> <p>Warenkorb öffnen</p></button>
+                <div id="open" class="basket d_none">
+                <div class = "basket_items" onclick="bubblingProtection(event)">
+                    
                     <h2>Warenkorb</h2>
                     <div id="cart"></div>
                 </div>
@@ -64,32 +68,39 @@
                         </tr>
                     </table>
                     <div class="prices">
-                    <input id="subtotal" value = 0€>
+                    <p id="subtotal">0€</p>
                     <p>5.00€</p>
                      <input id="sum" class="sum" value = 0€>     
                      </div>   
-                        
-                        
-                            
-                        
-                        
-                              
-                        
-                    
-                </div>
+                    </div>
                 <button class="submitBtn" onclick="openBasketDialog()">
                     <h2 class="submitOrder">Bestellen</h2>
                 </button>
+                </div>
+                
             </section>
+        <!-- </dialog> -->
         </div>
-    </div>
+        </div>
+        
     <footer></footer>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div id="basket_Responsive" onclick="openResponsiveBasketDialog()" class="basket-Responsive">
         <h2 class="basketResponsive">Warenkorb</h2>
     </div>
-    <dialog id="responsiveDialog" onclick="closeResponsiveDialog()">
-        <div class="responsiveBasketDialog" onclick="bubblingProtection(event)">
-            <header>
+    
+        
+            <!-- <header>
                 <h2>Deine Bestellung</h2>
             </header>
             <div class="basketWrapperResponsive"></div>
@@ -120,8 +131,8 @@
             <button class="submitBtn" onclick="openBasketDialog()">
                 <h2 class="submitOrder">Bestellen</h2>
             </button>
-        </div>
-    </dialog>
+        </div> -->
+    
     <dialog id="dialog" onclick="closeBasketDialog()">
         <div class="testOrder" onclick="bubblingProtection(event)">
            <h2>Sie haben eine Testbestellung vorgenommen!</h2>

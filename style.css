@@ -52,8 +52,7 @@ header{
 
 @media(max-width: 600px){
     .section-direction{
-        display:flex;
-        flex-direction: column;
+        display: block;
     }
 }
 
@@ -81,6 +80,7 @@ header{
 @media(max-width: 600px){
     .sectionOne{
         width: 100%;
+        height: calc(100% - 100px);
     }
 }
 
