@@ -74,16 +74,13 @@ function calculateSum() {
 }
 
 function deleteDishFromCart(i) {
-    // document.getElementById(`btnDelete${i}`);
     myCart.splice(i, 1);
     renderDishesToCart();
 }
 
-
-
-function openResponsiveBasketDialog() {
-    const dialog = document.getElementById('responsiveDialog');
-    dialog.showModal();
+function openBasketDialog() {
+    const submitDialog = document.getElementById('dialog');
+    submitDialog.showModal();
 }
 
 function openBasket() {

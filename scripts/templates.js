@@ -13,7 +13,7 @@ function getDishesTemplate(i) {
 function getDishesToCartTemplate(i) {
     return /*html*/`
         <div class = "cartDish">
-            <h3 class = "cartH3">${myCart[i].name}</h3>
+            <h3 class = "cart_H3">${myCart[i].name}</h3>
             <div class = "btnInputDirection">
                 <button onclick = "minus(${i})" id = "btnMinus${i}" class = "cartBtnMinus">-</button>
                 <input id = "amount${i}" value = ${myCart[i].amount}>
