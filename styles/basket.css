@@ -32,15 +32,12 @@
     .basket-wrapper{
         position: sticky;
         bottom: 0px;
-        /* height: 100px; */
         width: 100%;
     }
     .basket{
-        
         bottom: 0px;
         top: auto;
     }
-    
     .open_basket_button{
         display: block;
     }
@@ -52,20 +49,6 @@
 .basket-Responsive{
     display:none;  
 }
-
-/* @media(max-width: 600px){
-.basket-Responsive{
-    background-color: blue;
-    position: sticky;
-    bottom: 0px;
-    height: 50px;
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid white;
-    }
-} */
 
 .costs{
     display:flex;

@@ -33,7 +33,6 @@ function renderDishesToCart() {
 }
 
 function renderCartWithCurrentValues() {
-    
     const cartRef = document.getElementById('cart');
     cartRef.innerHTML = "";
     for (let i = 0; i < myCart.length; i++) {
@@ -47,8 +46,6 @@ function plus(i) {
 }
 
 function minus(i) {
-    // const currentAmountValueRef = document.getElementById(`amount${i}`);
-    // let currentAmountValue = currentAmountValueRef.value;
     if (myCart[i].amount <= 1) {
     deleteDishFromCart(i);
     }else{myCart[i].amount--;
@@ -101,13 +98,3 @@ function closeBasketDialog() {
 function bubblingProtection(event) {
     event.stopPropagation();
 }
-
-
-    
-
-
-
-
-// myCart[i].amount +1
-// currentAmountValue--;
-//     currentAmountValueRef.value = currentAmountValue;
