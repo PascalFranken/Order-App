@@ -33,3 +33,16 @@ h2{
     font-weight: bold;
 }
 
+.basket_button_font_amount{
+    font-size: 20px;
+    color: black;
+}
+
+.basket_button_font_hover_white{
+    font-size: 20px;
+    color: black;
+}
+
+.basket_button_font_hover_white:hover{
+    color: white;
+}

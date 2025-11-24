@@ -40,8 +40,8 @@
             </section>
             <section class="basket-wrapper">
                 <button class="open_basket_button" onclick="openBasket()"> 
-                    <p id="itemAmount">0</p> 
-                    <p>Warenkorb öffnen</p>
+                    <p class="basket_button_font_amount" id="itemAmount">0</p> 
+                    <p class="basket_button_font_hover_white" >Warenkorb öffnen</p>
                 </button>
                 <div id="open" class="basket d_none">
                     <div class = "basket_items" onclick="bubblingProtection(event)">
@@ -74,9 +74,6 @@
         </div>
     </div> 
     <footer></footer>
-    <div id="basket_Responsive" onclick="openResponsiveBasketDialog()" class="basket-Responsive">
-        <h2 class="basketResponsive">Warenkorb</h2>
-    </div>
     <dialog id="dialog" onclick="closeBasketDialog()">
         <div class="submit_order_dialog" onclick="bubblingProtection(event)">
            <h2>Sie haben eine Testbestellung vorgenommen!</h2>

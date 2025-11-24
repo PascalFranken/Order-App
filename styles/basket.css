@@ -15,6 +15,8 @@
     width: 100%;
     height: 500px;
     overflow-y: auto; 
+    
+    border: 1px solid black;
 }
 
 .open_basket_button{
@@ -26,14 +28,26 @@
         position: sticky;
         bottom: 0px;
         width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .basket{
         bottom: 0px;
         top: auto;
     }
     .open_basket_button{
-        display: block;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: orange;
+        width: 100%;
     }
+    .open_basket_button:hover{
+        cursor: pointer;
+    }
+
     .d_none{
         display: none;
     }
