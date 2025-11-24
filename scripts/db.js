@@ -32,5 +32,3 @@ const myDishes = [
 ];
 
 let myCart = [];
-
-// const myPrices = [];

@@ -56,7 +56,7 @@ header{
     }
 }
 
-.test{
+.big_background_image{
     background-image: url("./assets/img/big_picture/sectionOneBgImg.png");
     height: 200px;
     width: 100%;

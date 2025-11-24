@@ -31,65 +31,54 @@
     <div class="contentLimitation">
         <div class="section-direction">
             <section class="sectionOne">
-                
-                    
-                <div class="test">
-                    <img class="logoMiddle" src="./assets/img/fav_icon/favicon.ico" alt="">
-                    
+                <div class="big_background_image">
+                    <img class="logoMiddle" src="./assets/img/fav_icon/favicon.ico" alt="">   
                 </div>
-                
-                
                 <h1 class="restaurantName">Pascals Restaurant</h1>
-                    <p class="rating">Bewertung (4,2 von 5 Sternen)</p>
-                
-                
-                
+                <p class="rating">Bewertung (4,2 von 5 Sternen)</p>
                 <div class="main-dishes" id="dishes"></div>
             </section>
-            <!-- <dialog id="responsiveDialog" onclick="closeResponsiveDialog()"> -->
             <section class="basket-wrapper">
-                <button class="open_basket_button" onclick="openBasket()"> <p id="itemAmount">0</p> <p>Warenkorb öffnen</p></button>
-                <div id="open" class="basket d_none">
-                <div class = "basket_items" onclick="bubblingProtection(event)">
-                    
-                    <h2>Warenkorb</h2>
-                    <div id="cart"></div>
-                </div>
-                <div class="costs">
-                    <table>
-                        <tr>
-                            <td>Zwischensumme</td>
-                        </tr>
-                        <tr>
-                            <td>Lieferkosten</td>
-                        </tr>
-                        <tr>
-                            <td class="sum">Gesamt</td>
-                        </tr>
-                    </table>
-                    <div class="prices">
-                    <p id="subtotal">0€</p>
-                    <p>5.00€</p>
-                     <p class="sum" id="sum">0€</p>    
-                     </div>   
-                    </div>
-                <button class="submitBtn" onclick="openBasketDialog()">
-                    <h2 class="submitOrder">Bestellen</h2>
+                <button class="open_basket_button" onclick="openBasket()"> 
+                    <p id="itemAmount">0</p> 
+                    <p>Warenkorb öffnen</p>
                 </button>
-                </div>
-                
+                <div id="open" class="basket d_none">
+                    <div class = "basket_items" onclick="bubblingProtection(event)">
+                        <h2>Warenkorb</h2>
+                        <div id="cart"></div>
+                    </div>
+                    <div class="costs">
+                        <table>
+                            <tr>
+                                <td>Zwischensumme</td>
+                            </tr>
+                            <tr>
+                                <td>Lieferkosten</td>
+                            </tr>
+                            <tr>
+                                <td class="sum">Gesamt</td>
+                            </tr>
+                        </table>
+                        <div class="prices">
+                            <p id="subtotal">0€</p>
+                            <p>5.00€</p>
+                            <p class="sum" id="sum">0€</p>    
+                        </div>   
+                    </div>
+                    <button class="submitBtn" onclick="openBasketDialog()">
+                        <h2 class="submitOrder">Bestellen</h2>
+                    </button>
+                </div>   
             </section>
-        <!-- </dialog> -->
         </div>
-        </div>
-        
+    </div> 
     <footer></footer>
-    
     <div id="basket_Responsive" onclick="openResponsiveBasketDialog()" class="basket-Responsive">
         <h2 class="basketResponsive">Warenkorb</h2>
     </div>
     <dialog id="dialog" onclick="closeBasketDialog()">
-        <div class="testOrder" onclick="bubblingProtection(event)">
+        <div class="submit_order_dialog" onclick="bubblingProtection(event)">
            <h2>Sie haben eine Testbestellung vorgenommen!</h2>
         </div>
     </dialog>
