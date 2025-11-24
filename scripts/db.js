@@ -28,6 +28,72 @@ const myDishes = [
         "price": 7,
         "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
         "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
+    },
+    {
+        "name": "test Schnitzel",
+        "price": 7,
+        "description": "klassisch aus Kalbfleisch, goldbraun paniert und in Butterschmalz ausgebacken",
+        "amount": 1,
     }
 ];
 
