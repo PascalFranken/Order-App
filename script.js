@@ -20,26 +20,14 @@ function addDishesToCart(i) {
 }   
 
 function renderDishesToCart() {
-    
     const cartRef = document.getElementById('cart');
     cartRef.innerHTML = "";
     for (let i = 0; i < myCart.length; i++) {
     cartRef.innerHTML += getDishesToCartTemplate(i);
     }
     calculateSum();
-    // const currentSubtotalValueRef = document.getElementById('subtotal');
-    // let currentSubtotalValue = currentSubtotalValueRef.value;
-    // currentSubtotalValue = myCart.price;
 }
 
-function renderCartWithCurrentValues() {
-    const cartRef = document.getElementById('cart');
-    cartRef.innerHTML = "";
-    for (let i = 0; i < myCart.length; i++) {
-    cartRef.innerHTML += getCartWithCurrentValuesTemplate(i);
-    }
-}
-   
 function plus(i) {
     myCart[i].amount++;
     renderDishesToCart();
@@ -76,13 +64,28 @@ function deleteDishFromCart(i) {
 }
 
 function openBasketDialog() {
+    const clearSum = document.getElementById('sum')
+    const clearSubtotal = document.getElementById('subtotal')
+    const clearBasket = document.getElementById('cart')
     const submitDialog = document.getElementById('dialog');
     submitDialog.showModal();
+    clearBasket.innerHTML = "";
+    clearSubtotal.innerText = "0€"
+    clearSum.innerText = "0€"
 }
 
 function openBasket() {
     const openDialog = document.getElementById('open');
     openDialog.classList.toggle('d_none');
+}
+
+function toggleResponsiveBasketFont() {
+    const toggleBasketText = document.getElementById('toggleBasketText')
+    if (toggleBasketText.innerText == "Warenkorb öffnen") {
+        toggleBasketText.innerText = "Warenkorb schließen"
+    }else if(toggleBasketText.innerText == "Warenkorb schließen"){
+             toggleBasketText.innerText = "Warenkorb öffnen"
+    }
 }
 
 function closeResponsiveDialog() {

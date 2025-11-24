@@ -39,9 +39,9 @@
                 <div class="main-dishes" id="dishes"></div>
             </section>
             <section class="basket-wrapper">
-                <button class="open_basket_button" onclick="openBasket()"> 
+                <button class="open_basket_button" onclick="openBasket(), toggleResponsiveBasketFont()"> 
                     <p class="basket_button_font_amount" id="itemAmount">0</p> 
-                    <p class="basket_button_font_hover_white" >Warenkorb öffnen</p>
+                    <p id="toggleBasketText" class="basket_button_font_hover_white">Warenkorb öffnen</p>
                 </button>
                 <div id="open" class="basket d_none">
                     <div class = "basket_items" onclick="bubblingProtection(event)">
