@@ -20,26 +20,26 @@
 <body onload="renderDishes()">
     <header>
         <div class = "inner">
-        <img class="header-logo" src="./assets/img/logo/Logo.png" alt="Bild mit der Schrift Bestell App, bei welcher beide l Buchstaben als Messer und Gabel dargestellt werden">
-        <div class="menu-btn-direction">
-        <div class="menu-btn"></div>
-        <div class="menu-btn"></div>
-        <div class="menu-btn"></div>
-        </div>
+            <img class="header-logo" src="./assets/img/logo/Logo.png" alt="Bild mit der Schrift Bestell App, bei welcher beide l Buchstaben als Messer und Gabel dargestellt werden">
+            <div class="menu-btn-direction">
+                <div class="menu-btn"></div>
+                <div class="menu-btn"></div>
+                <div class="menu-btn"></div>
+            </div>
         </div>
     </header>
     <div class="contentLimitation">
         <div class="section-direction">
             <section class="sectionOne">
                 <div class="big_background_image">
-                    <img class="logoMiddle" src="./assets/img/fav_icon/favicon.ico" alt="">   
+                    <img class="logo_middle" src="./assets/img/fav_icon/favicon.ico" alt="Bild mit der Schrift Bestell App, bei welcher beide l Buchstaben als Messer und Gabel dargestellt werden">   
                 </div>
                 <h1 class="restaurantName">Pascals Restaurant</h1>
                 <p class="rating">Bewertung (4,2 von 5 Sternen)</p>
-                <div class="main-dishes" id="dishes"></div>
+                <div class="main_dishes" id="dishes"></div>
             </section>
             <section class="basket-wrapper">
-                <button class="open_basket_button" onclick="openBasket(), toggleResponsiveBasketFont()"> 
+                <button class="open_basket_button" onclick="openResponsiveBasket(), toggleResponsiveBasketFont()"> 
                     <p class="basket_button_font_amount" id="itemAmount">0</p> 
                     <p id="toggleBasketText" class="basket_button_font_hover_white">Warenkorb öffnen</p>
                 </button>
@@ -66,17 +66,18 @@
                             <p class="sum" id="sum">0€</p>    
                         </div>   
                     </div>
-                    <button class="submitBtn" onclick="openBasketDialog()">
-                        <h2 class="submitOrder">Bestellen</h2>
+                    <button class="submit_btn" onclick="openBasketDialog()">
+                        <h2>Bestellen</h2>
                     </button>
                 </div>   
             </section>
         </div>
     </div> 
     <footer></footer>
-    <dialog id="dialog" onclick="closeBasketDialog()">
+    <dialog id="dialog" onclick="closeSubmitDialog()">
         <div class="submit_order_dialog" onclick="bubblingProtection(event)">
-           <h2>Sie haben eine Testbestellung vorgenommen!</h2>
+            <h2>Sie haben eine Testbestellung vorgenommen!</h2>
+            <button id="closeDialogButton" class="close_dialog_button" onclick="closeSubmitDialog()">X</button>
         </div>
     </dialog>
 </body>

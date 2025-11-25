@@ -10,7 +10,7 @@ h2{
     text-align: center;
 }
 
-.main-dishes{
+.main_dishes{
     font-size: 15px;
     font-weight: bold;
 }
@@ -44,5 +44,16 @@ h2{
 }
 
 .basket_button_font_hover_white:hover{
+    color: white;
+}
+
+.close_dialog_button{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_dialog_button:hover{
     color: white;
 }

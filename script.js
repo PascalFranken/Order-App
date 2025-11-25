@@ -1,19 +1,16 @@
 function renderDishes() {
     const dishesRef = document.getElementById('dishes');
     dishesRef.innerHTML = "";
-
     for (let i = 0; i < myDishes.length; i++) {
         dishesRef.innerHTML += getDishesTemplate(i);
     }
 }
 
 function addDishesToCart(i) {
-
-     if(myCart[i] == myDishes[i]){
+    if(myCart[i] == myDishes[i]){
         plus(i);
-       }
-    
-   else if (myDishes[i]) {
+    }
+    else if (myDishes[i]) {
         myCart.push(myDishes[i]);
         renderDishesToCart(i);      
     }      
@@ -59,43 +56,47 @@ function calculateSum() {
 }
 
 function deleteDishFromCart(i) {
+    const clearSum = document.getElementById('sum');
+    const clearSubtotal = document.getElementById('subtotal');
+    const clearBasket = document.getElementById('cart');
     myCart.splice(i, 1);
     renderDishesToCart();
+    if (clearBasket.innerHTML == "") {
+        clearSubtotal.innerText = "0€";
+        clearSum.innerText = "0€";
+    }
 }
 
 function openBasketDialog() {
-    const clearSum = document.getElementById('sum')
-    const clearSubtotal = document.getElementById('subtotal')
-    const clearBasket = document.getElementById('cart')
+    const clearSum = document.getElementById('sum');
+    const clearSubtotal = document.getElementById('subtotal');
+    const clearBasket = document.getElementById('cart');
     const submitDialog = document.getElementById('dialog');
     submitDialog.showModal();
-    clearBasket.innerHTML = "";
-    clearSubtotal.innerText = "0€"
-    clearSum.innerText = "0€"
+    clearBasket.innerHTML = "";  
+    clearSubtotal.innerText = "0€";
+    clearSum.innerText = "0€";
 }
 
-function openBasket() {
+function openResponsiveBasket() {
     const openDialog = document.getElementById('open');
     openDialog.classList.toggle('d_none');
 }
 
 function toggleResponsiveBasketFont() {
-    const toggleBasketText = document.getElementById('toggleBasketText')
+    const toggleBasketText = document.getElementById('toggleBasketText');
     if (toggleBasketText.innerText == "Warenkorb öffnen") {
-        toggleBasketText.innerText = "Warenkorb schließen"
+        toggleBasketText.innerText = "Warenkorb schließen";
     }else if(toggleBasketText.innerText == "Warenkorb schließen"){
-             toggleBasketText.innerText = "Warenkorb öffnen"
+             toggleBasketText.innerText = "Warenkorb öffnen";
     }
 }
 
-function closeResponsiveDialog() {
-    const closeDialog = document.getElementById('responsiveDialog');
-    closeDialog.close();
-}
-
-function closeBasketDialog() {
+function closeSubmitDialog() {
+    const closeDialogWithButton = document.getElementById('closeDialogButton');
     const closeDialog = document.getElementById('dialog');
     closeDialog.close();
+    closeDialogWithButton.close();
 }
 
 function bubblingProtection(event) {

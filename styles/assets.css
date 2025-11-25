@@ -1,9 +1,9 @@
-.logoMiddle{
+.logo_middle{
     position:absolute;
     top: 175px;
 }
 
-.addBtn{
+.add_btn{
     color: orange;
     height: 20px;
     width: 20px;
@@ -14,7 +14,7 @@
     cursor: pointer;
 }
 
-.cartBtnMinus{
+.cart_btn_minus{
     height: 20px;
     width: 20px;
     color: orange;
@@ -26,7 +26,7 @@
     cursor: pointer;
 }
 
-.cartBtnPlus{
+.cart_btn_plus{
     height: 20px;
     width: 20px;
     color: orange;
@@ -37,7 +37,7 @@
     cursor: pointer;
 }
 
-.cartBtnDelete{
+.cart_btn_delete{
     height: 20px;
     width: 20px;
     color: orange;
@@ -52,13 +52,13 @@ input{
     width: 40px;
 }
 
-.submitBtn{
+.submit_btn{
     width: 100%;
     height: 50px;
     background-color: orange;
 }
 
-.submitBtn:hover{
+.submit_btn:hover{
     cursor: pointer;
     color: white;
 }
@@ -68,4 +68,14 @@ input{
     flex-direction: column;
     gap: 8px;
     margin-top: 12px;
+}
+
+.close_dialog_button{
+    height: 50px;
+    width: 50px;
+    background-color: orange;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
