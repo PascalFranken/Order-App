@@ -5,6 +5,10 @@ body{
     width: 100%;
 }
 
+.remove_scrollbar{
+    overflow: hidden;
+}
+
 header{
     padding-right: 10px;
     padding-left: 10px;

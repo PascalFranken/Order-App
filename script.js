@@ -86,6 +86,7 @@ function openResponsiveBasket() {
     let openDialog = document.getElementById('open');
     openDialog.classList.toggle('d_none');
     hideDishButtons();
+    hideScrollbar();
 }
 
 function closeBasket() {
@@ -94,6 +95,7 @@ function closeBasket() {
     openDialog.classList.add('d_none');
     toggleBasketText.innerText = "Warenkorb öffnen";
     showDishButtons();
+    showScrollbar();
 }
 
 function toggleResponsiveBasketFont() {
@@ -101,8 +103,9 @@ function toggleResponsiveBasketFont() {
     if (toggleBasketText.innerText == "Warenkorb öffnen") {
         toggleBasketText.innerText = "Warenkorb schließen";  
     }else if(toggleBasketText.innerText == "Warenkorb schließen"){
-             showDishButtons();
              toggleBasketText.innerText = "Warenkorb öffnen";
+             showDishButtons();
+             showScrollbar();
     }
 }
 
@@ -128,4 +131,14 @@ function hideDishButtons() {
 function showDishButtons() {
     const buttons = document.querySelectorAll('.add_btn');
     buttons.forEach(btn => btn.style.display = 'flex');
+}
+
+function hideScrollbar() {
+    const removeScrollbar = document.getElementById('removeScrollbar');
+    removeScrollbar.classList.add('remove_scrollbar');
+}
+
+function showScrollbar() {
+    const removeScrollbar = document.getElementById('removeScrollbar');
+    removeScrollbar.classList.remove('remove_scrollbar');
 }
