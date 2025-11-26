@@ -17,7 +17,7 @@
     <script src="./scripts/db.js"></script>
     <script src="./scripts/templates.js"></script>
 </head>
-<body onload="renderDishes()">
+<body onload="renderDishes()" onclick="closeBasket()">
     <header>
         <div class = "inner">
             <img class="header-logo" src="./assets/img/logo/Logo.png" alt="Bild mit der Schrift Bestell App, bei welcher beide l Buchstaben als Messer und Gabel dargestellt werden">
@@ -39,7 +39,7 @@
                 <div class="main_dishes" id="dishes"></div>
             </section>
             <section class="basket-wrapper">
-                <button class="open_basket_button" onclick="openResponsiveBasket(), toggleResponsiveBasketFont()"> 
+                <button class="open_basket_button" onclick="openResponsiveBasket(), toggleResponsiveBasketFont(), bubblingProtection(event)"> 
                     <p class="basket_button_font_amount" id="itemAmount">0</p> 
                     <p id="toggleBasketText" class="basket_button_font_hover_white">Warenkorb öffnen</p>
                 </button>
@@ -77,7 +77,7 @@
     <dialog id="dialog" onclick="closeSubmitDialog()">
         <div class="submit_order_dialog" onclick="bubblingProtection(event)">
             <h2>Sie haben eine Testbestellung vorgenommen!</h2>
-            <button id="closeDialogButton" class="close_dialog_button" onclick="closeSubmitDialog()">X</button>
+            <button class="close_dialog_button" onclick="closeSubmitDialogWithButton()">X</button>
         </div>
     </dialog>
 </body>

@@ -7,13 +7,14 @@ function renderDishes() {
 }
 
 function addDishesToCart(i) {
-    if(myCart[i] == myDishes[i]){
-        plus(i);
-    }
-    else if (myDishes[i]) {
-        myCart.push(myDishes[i]);
-        renderDishesToCart(i);      
-    }      
+    const dish = myDishes[i];
+    const dishCopy = myCart.findIndex(element => element.name === dish.name);
+    if (dishCopy !== -1) {
+        myCart[dishCopy].amount++;
+    }else{
+        myCart.push({...dish, amount: 1});
+    } 
+    renderDishesToCart();
 }   
 
 function renderDishesToCart() {
@@ -68,19 +69,29 @@ function deleteDishFromCart(i) {
 }
 
 function openBasketDialog() {
+    const resetAmount = document.getElementById('itemAmount')
     const clearSum = document.getElementById('sum');
     const clearSubtotal = document.getElementById('subtotal');
     const clearBasket = document.getElementById('cart');
     const submitDialog = document.getElementById('dialog');
     submitDialog.showModal();
+    myCart.length = 0;
     clearBasket.innerHTML = "";  
     clearSubtotal.innerText = "0€";
     clearSum.innerText = "0€";
+    resetAmount.innerText = 0;
 }
 
 function openResponsiveBasket() {
     const openDialog = document.getElementById('open');
     openDialog.classList.toggle('d_none');
+}
+
+function closeBasket() {
+    const toggleBasketText = document.getElementById('toggleBasketText');
+    const openDialog = document.getElementById('open');
+    openDialog.classList.add('d_none');
+    toggleBasketText.innerText = "Warenkorb öffnen";
 }
 
 function toggleResponsiveBasketFont() {
@@ -93,12 +104,15 @@ function toggleResponsiveBasketFont() {
 }
 
 function closeSubmitDialog() {
-    const closeDialogWithButton = document.getElementById('closeDialogButton');
     const closeDialog = document.getElementById('dialog');
     closeDialog.close();
+}
+
+function closeSubmitDialogWithButton() {
+    const closeDialogWithButton = document.getElementById('dialog');
     closeDialogWithButton.close();
 }
 
 function bubblingProtection(event) {
     event.stopPropagation();
-}
+} 

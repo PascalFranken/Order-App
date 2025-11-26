@@ -2,7 +2,7 @@
     width: 300px;
     flex-grow: 1;
     padding: 16px;
-    height: auto;
+    height: 100%;
 }
 
 .basket{
@@ -13,13 +13,16 @@
 
 .basket_items{
     width: 100%;
-    height: 500px;
+    height: 600px;
     overflow-y: auto; 
-    
     border: 1px solid black;
 }
 
 .open_basket_button{
+    display:none;
+}
+
+.close_basket_button_d_none{
     display:none;
 }
 
@@ -28,21 +31,34 @@
         position: sticky;
         bottom: 0px;
         width: 100%;
-        background-color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: auto;
+        background-color: white;
     }
     .basket{
+        position: relative;
         bottom: 0px;
-        top: auto;
-    }
+        top: 0px;
+        
+    }    
     .open_basket_button{
         display:flex;
         flex-direction: column;
         justify-content: center;
         background-color: orange;
         width: 100%;
+        height: 60px;
+
+    }
+    .close_basket_button{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: orange;
+        width: 100%;
+        height: 60px;
     }
     .open_basket_button:hover{
         cursor: pointer;
