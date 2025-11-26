@@ -9,10 +9,10 @@ function renderDishes() {
 function addDishesToCart(i) {
     const dish = myDishes[i];
     const dishCopy = myCart.findIndex(element => element.name === dish.name);
-    if (dishCopy !== -1) {
+    if (dishCopy >= 0) {
         myCart[dishCopy].amount++;
     }else{
-        myCart.push({...dish, amount: 1});
+        myCart.push(Object.assign({},dish, {amount: 1}));
     } 
     renderDishesToCart();
 }   
@@ -83,8 +83,9 @@ function openBasketDialog() {
 }
 
 function openResponsiveBasket() {
-    const openDialog = document.getElementById('open');
+    let openDialog = document.getElementById('open');
     openDialog.classList.toggle('d_none');
+    hideDishButtons();
 }
 
 function closeBasket() {
@@ -92,13 +93,15 @@ function closeBasket() {
     const openDialog = document.getElementById('open');
     openDialog.classList.add('d_none');
     toggleBasketText.innerText = "Warenkorb öffnen";
+    showDishButtons();
 }
 
 function toggleResponsiveBasketFont() {
     const toggleBasketText = document.getElementById('toggleBasketText');
     if (toggleBasketText.innerText == "Warenkorb öffnen") {
-        toggleBasketText.innerText = "Warenkorb schließen";
+        toggleBasketText.innerText = "Warenkorb schließen";  
     }else if(toggleBasketText.innerText == "Warenkorb schließen"){
+             showDishButtons();
              toggleBasketText.innerText = "Warenkorb öffnen";
     }
 }
@@ -116,3 +119,13 @@ function closeSubmitDialogWithButton() {
 function bubblingProtection(event) {
     event.stopPropagation();
 } 
+
+function hideDishButtons() {
+    const buttons = document.querySelectorAll('.add_btn');
+    buttons.forEach(btn => btn.style.display = 'none');
+}
+
+function showDishButtons() {
+    const buttons = document.querySelectorAll('.add_btn');
+    buttons.forEach(btn => btn.style.display = 'flex');
+}

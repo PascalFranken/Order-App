@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+.add_btn::before{
+    content: "+";
+    color: orange;
+}
+
 .cart_btn_minus{
     height: 20px;
     width: 20px;
