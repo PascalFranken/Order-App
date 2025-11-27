@@ -67,6 +67,9 @@
     .d_none{
         display: none;
     }
+    .basket_items{
+        height: 315px;
+    }
 }
 
 .basket-Responsive{
@@ -107,7 +110,6 @@ table{
     width: 100%;
     flex: 1;
     padding: 16px;
-    overflow-y: auto;
     height: 435px;
 }
 
